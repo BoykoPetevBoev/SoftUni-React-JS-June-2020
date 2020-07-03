@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ClassApp from './ClassApp'
 import * as serviceWorker from './serviceWorker';
+
+const name = 'Boyko Boev';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ClassApp num = "5" name = {name}/>
+    <App num = "5" name = {name}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

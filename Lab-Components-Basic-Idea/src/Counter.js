@@ -5,19 +5,27 @@ class Counter extends React.Component {
         super(props)
 
         this.state = {
-            num: props.num
+            counter: props.counter
         }
+        this.updateCounter = this.updateCounter.bind(this)
     }
-    updateCounter = () => {
+    // First
+    updateCounter () {
         this.setState({
-            num: Number(this.state.num) + 1
+            counter: Number(this.state.counter) + 1
         })
     }
+    // Second
+    // updateCounter = () => {
+    //     this.setState({
+    //         counter: Number(this.state.counter) + 1
+    //     })
+    // }
+    
     render() {
         return(
             <div>
-                <p>{this.state.num}</p>
-                <button onClick={this.updateCounter}>CLICK</button>
+                <button onClick={this.updateCounter}>{this.state.counter}</button>
             </div>
         )
     }

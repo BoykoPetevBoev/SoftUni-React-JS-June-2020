@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
+import Input from './Input';
 
 class ClassApp extends React.Component {
     constructor(props) {
@@ -10,8 +11,16 @@ class ClassApp extends React.Component {
             counter: this.props.num,
             flag: false
         }
-        console.log(this.props)
-        console.log(this.state)
+        this.counters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+
+    renderCounters() {
+        return this.counters.map((counter, i) => {
+            console.log(counter)
+            return (
+                <Counter key={i} counter={counter} />
+            )
+        })
     }
 
     render() {
@@ -19,10 +28,9 @@ class ClassApp extends React.Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
+                    <Input />
                     <p> Class Component </p>
-                    <Counter num={999}/>
-                    <Counter num={0}/>
-                    <Counter num={-999}/>
+                    {this.renderCounters()}
                     <p> Edit <code>src/App.js</code> and save to reload.</p>
                     <a
                         className="App-link"

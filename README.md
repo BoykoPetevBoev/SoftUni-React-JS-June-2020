@@ -34,21 +34,35 @@
 
 ### Import and export
 
-| Trigger | Content |
-| ------- | ------- |
-| imp→	| imports entire module import fs from 'fs' |
-| imn→	| imports entire module without module name import 'animate.css' |
-| imd→	| imports only a portion of the module using destructing import {rename} from 'fs' |
-| ime→	| imports everything as alias from the module import * as localAlias from 'fs' |
-| ima→	| imports only a portion of the module as alias import { rename as localRename } from 'fs' |
-| rqr→	| require package require('') |
-| req→	| require package to const const packageName = require('packageName') |
-| mde→	| default module.exports module.exports = {} |
-| env→	| exports name variable export const nameVariable = localVariable |
-| enf→	| exports name function export const log = (parameter) => { console.log(parameter);} |
-| edf→	| exports default function export default function fileName (parameter){ console.log(parameter);} |
-| ecl→	| exports default class export default class Calculator { } |
-| ece→	| exports default class by extending a base one export default class Calculator extends BaseClass { } |
+| Code | Trigger | Content |
+| ---- | ------- | ------- |
+| `import moduleName from 'module';` | imp→	| imports entire module import fs from 'fs' |
+| `import 'module';` | imn→	| imports entire module without module name import 'animate.css' |
+| `import {  } from 'module';` | imd→	| imports only a portion of the module using destructing import {rename} from 'fs' |
+| `import * as alias from 'module';` | ime→	| imports everything as alias from the module import * as localAlias from 'fs' |
+| `import { originalName as alias } from 'module';` | ima→	| imports only a portion of the module as alias import { rename as localRename } from 'fs' |
+| `require('package');` | rqr→	| require package require('') |
+| `const packageName = require('packageName');` | req→	| require package to const const packageName = require('packageName') |
+| `module.exports = {
+    
+};
+` | mde→	| default module.exports module.exports = {} |
+| `export const exportVariable = localVariable;` | env→	| exports name variable export const nameVariable = localVariable |
+| `export const functionName = (params) => {
+    
+};
+` | enf→	| exports name function export const log = (parameter) => { console.log(parameter);} |
+| `export default function TEST(params) {
+    
+};
+` | edf→	| exports default function export default function fileName (parameter){ console.log(parameter);} |
+| `export default class className {
+    
+};` | ecl→	| exports default class export default class Calculator { } |
+| `export default class className extends baseclassName {
+    
+};
+` | ece→	| exports default class by extending a base one export default class Calculator extends BaseClass { } |
  
 ### Class helpers
 

@@ -17,71 +17,149 @@
 
 ![Certificate]() -->
 
-## JavaScript code snippets
+# JavaScript code snippets
 
-### Import and export 
+## Import
+### imn→	
+imports entire module 
+```javascript 
+import 'module';
+```                  
+### imp→	
+imports entire module import fs from 'fs' 
+```javascript 
+import moduleName from 'module';
+```  
+### imd→	
+imports only a portion of the module using destructing
+```javascript 
+import {  } from 'module';
+```        
 
-| Code | Trigger | Content |
-| ---- | ------- | ------- |
-| **Import** |
-| ```javascript import 'module';```                 | imn→	| imports entire module |
-| ```javascript import moduleName from 'module';``` | imp→	| imports entire module import fs from 'fs' |
-| ```javascript import {  } from 'module';```       | imd→	| imports only a portion of the module using destructing |
-| **Require** |
-| ```javascript require('package');```            | rqr→	| require package require('') |
-| ```javascript const Name = require('Name');```    | req→	| require package to const |
-| **Export** |
-| ```javascript module.exports = { };```                       | mde→	| default module.exports |
-| ```javascript export const functionName = (params) => {};``` | enf→	| exports name function |
-| ```javascript export default function TEST(params) {};```    | edf→	| exports default function |
-| ```javascript export default class className {};```          | ecl→	| exports default class |
+## Require
+### rqr→	
+require package require('') 
+```javascript 
+require('package');
+```   
+### req→	
+require package to const
+```javascript 
+const Name = require('Name');
+```    
+
+## Export
+### mde→	
+default module.exports 
+```javascript 
+module.exports = { };
+```                        
+### enf→	
+exports name function 
+```javascript 
+export const functionName = (params) => {};
+```  
+### edf→	
+exports default function 
+```javascript 
+export default function TEST(params) {};
+```     
+### ecl→	
+exports default class 
+```javascript 
+export default class className {};
+```           
 
 
-### Class helpers
+## Class 
+### con→ 	 
+adds default constructor in the class 
+```javascript 
+constructor(params) {}
+```     
+### met→	 
+creates a method inside a class 
+```javascript 
+methodName(params) {}
+```      
+### pge→	 
+creates a getter property  
+```javascript 
+get propertyName() {}
+```      
+### pse→	 
+creates a setter property  
+```javascript 
+set propertyName(value) {}
+``` 
 
-| Code | Trigger | Content |
-| ---- | ------- | ------- |
-| ```javascript constructor(params) {}```     | con→ 	| adds default constructor in the class |
-| ```javascript methodName(params) {}```      | met→	| creates a method inside a class |
-| ```javascript get propertyName() {}```      | pge→	| creates a getter property  |
-| ```javascript set propertyName(value) {}``` | pse→	| creates a setter property  |
+## Various methods 
+### anfn→	 
+ creates an anonymous function 
+```javascript  
+(params) => {}
+```                        
+### nfn→	 
+creates a named function  
+```javascript  
+const name = (params) => {}
+```            
+### thenc→	 
+adds then and catch declaration to a promise 
+```javascript  
+.then(result => {})
+.catch(err => {});
+``` 
 
-### Various methods 
+## Loops
+### fre→	
+forEach loop in ES6 syntax 
+```javascript 
+array.forEach(currentItem => {});
+``` 
+### fof→	
+for ... of loop  
+```javascript 
+for (const item of object) {}
+```     
+### fin→	
+for ... in loop  
+```javascript 
+for (const item in object) {}
+```    
 
-| Code | Trigger |	Content | 
-| ---- | ------- | -------- |
-| ```javascript  (params) => {}```                         | anfn→	| creates an anonymous function |
-| ```javascript  const name = (params) => {}```            | nfn→	| creates a named function  |
-| ```javascript  .then(result => { }).catch(err => {});``` | thenc→	| adds then and catch declaration to a promise |
-| **Loops** |
-| ```javascript array.forEach(currentItem => {});``` | fre→	| forEach loop in ES6 syntax  |
-| ```javascript for (const item of object) {}```     | fof→	| for ... of loop  |
-| ```javascript for (const item in object) {}```     | fin→	| for ... in loop  |
-| **Destructing** |
-| ```javascript const {propertyName} = object;```    | dob→	| destructing object syntax  |
-| ```javascript const [propertyName] = array;```     | dar→	| destructing array syntax   |
+## Destructing
+### dob→	
+destructing object syntax 
+```javascript 
+const {propertyName} = object;
+```    
+### dar→	
+destructing array syntax   
+```javascript 
+const [propertyName] = array;
+```     
 
-## Console methods
-
-### **clg→**    console log
+## Console 
+### clg→    
+console log
 ```javascript
  console.log(object);
  ```   
- ---
-### **cer→**  console error
+### cer→  
+console error
 ```javascript
  console.error(object);
  ``` 
- ---
-### **clt→**    console table
+### clt→   
+console table
 ```javascript
  console.table(object);
 ``` 
----
 
-## Reactjs code snippets
----
-### **rcc→**    class component skeleton
+## Reactjs 
+### rcc→   
+class component skeleton
 ```javascript
 import React, { Component } from 'react';
 
@@ -96,8 +174,8 @@ class TEST extends Component {
 }
 export default TEST;
 ```
----
-### **rrc→**   class component skeleton with react-redux connect
+### rrc→  
+class component skeleton with react-redux connect
 ```javascript
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -120,89 +198,405 @@ export default connect(
     mapStateToProps,
 )(TEST);
 ```
+### rccp→	 
+class component skeleton with prop types after the class
+```javascript
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
+class TEST extends Component {
+    render() {
+        return (
+            <div>
 
+            </div>
+        );
+    }
+}
+TEST.propTypes = {
 
-| Code | Trigger | Content |
-| ---- | ------- | ------- |
-|  | rcc→	| class component skeleton|
-|  | rrc→	| class component skeleton with react-redux connect|
-|  | rrdc→	| class component skeleton with react-redux connect and dispatch|
-|  | rccp→	| class component skeleton with prop types after the class|
-|  | rcjc→	| class component skeleton without import and default export lines|
-|  | rcfc→	| class component skeleton that contains all the lifecycle methods|
-|  | rwwd→	| class component without import statements|
-|  | rpc→	| class pure component skeleton with prop types after the class|
-|  | rsc→	| stateless component skeleton|
-|  | rscp→	| stateless component with prop types skeleton|
-|  | rscm→	| memoize stateless component skeleton|
-|  | rscpm→| memoize stateless component with prop types skeleton|
-|  | rsf→	| stateless named function skeleton|
-|  | rsfp→	| stateless named function with prop types skeleton|
-|  | rsi→	| stateless component with prop types and implicit return|
-|  | fcc→	| class component with flow types skeleton|
-|  | fsf→	| stateless named function skeleton with flow types skeleton|
-|  | fsc→	| stateless component with flow types skeleton|
-|  | rpt→	| empty propTypes declaration|
-|  | rdp→	| empty defaultProps declaration|
-|  | con→	| class default constructor with props|
-|  | conc→	| class default constructor with props and context|
-|  | est→	| empty state object|
-|  | cwm→	| componentWillMount method|
-|  | cdm→	| componentDidMount method|
-|  | cwr→	| componentWillReceiveProps method|
-|  | scu→	| shouldComponentUpdate method|
-|  | cwup→	| componentWillUpdate method|
-|  | cdup→	| componentDidUpdate method|
-|  | cwun→	| componentWillUnmount method
-|  | gsbu→	| getSnapshotBeforeUpdate method|
-|  | gdsfp→ | static getDerivedStateFromProps method|
-|  | cdc→	| componentDidCatch method|
-|  | ren→	| render method|
-|  | sst→	| this.setState with object as parameter|
-|  | ssf→	| this.setState with function as parameter|
-|  | props| →	this.props|
-|  | state| →	this.state|
-|  | bnd→	| binds the this of method inside the constructor|
-|  | disp→	| MapDispatchToProps redux function|
+};
+export default TEST;
+```
+### rcjc→	 
+class component skeleton without import and default export lines
+```javascript
+class TEST extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
+```
+<!-- ### rcfc→	 
+class component skeleton that contains all the lifecycle methods
+```javascript
 
-The following table lists all the snippets that can be used for prop types. Every snippet regarding prop types begins with pt so it's easy to group it all together and explore all the available options. On top of that each prop type snippets has one equivalent when we need to declare that this property is also required.
+``` -->
+### rwwd→	 
+class component without import statements
+```javascript
+class TEST extends React.Component {
+    constructor(props) {
+        super(props);
 
-For example pta creates the PropTypes.array and ptar creates the PropTypes.array.isRequired
+        this.state = {};
+    }
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
+TEST.propTypes = {
+
+};
+export default TEST;
+```
+### rpc→	 
+class pure component skeleton with prop types after the class
+```javascript
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+
+class TEST extends PureComponent {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
+TEST.propTypes = {
+
+};
+export default TEST;
+```
+### rsc→	 
+stateless component skeleton
+```javascript
+import React from 'react';
+
+const TEST = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
+export default TEST;
+```
+### rscp→	 
+stateless component with prop types skeleton
+```javascript
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const TEST = props => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
+TEST.propTypes = {
+    
+};
+export default TEST;
+```
+### rscm→	 
+memoize stateless component skeleton
+```javascript
+import React, { memo } from 'react';
+
+const TEST = memo(() => {
+    return (
+        <div>
+            
+        </div>
+    );
+});
+export default TEST;
+```
+### rscpm→   
+memoize stateless component with prop types skeleton
+```javascript
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
+
+const TEST = memo((props) => {
+    return (
+        <div>
+            
+        </div>
+    );
+});
+TEST.propTypes = {
+    
+};
+export default TEST;
+```
+### rsf→	 
+stateless named function skeleton
+```javascript
+import React from 'react';
+
+function TEST(props) {
+    return (
+        <div>
+            
+        </div>
+    );
+}
+export default TEST;
+```
+### rsfp→	 
+stateless named function with prop types skeleton
+```javascript
+import React from 'react';
+import PropTypes from 'prop-types';
+
+TEST.propTypes = {
+    
+};
+function TEST(props) {
+    return (
+        <div>
+            
+        </div>
+    );
+}
+export default TEST;
+```
+### rsi→	 
+stateless component with prop types and implicit return
+```javascript
+import React from 'react';
+
+const TEST = (props) => (
+    
+);
+export default TEST;
+```
+### fcc→	 
+class component with flow types skeleton
+```javascript
+import * as React from 'react';
+type Props = {
+  
+};
+type State = {
+  
+};
+export class TEST extends React.Component<Props, State>{
+  render() {
+    return (
+      <div>
+        
+      </div>
+    );
+  };
+};
+```
+### fsf→	 
+stateless named function skeleton with flow types skeleton
+```javascript
+import * as React from 'react';
+type Props = {
+  
+};
+export function TEST(props: Props) {
+  return (
+    <div>
+      
+    </div>
+  );
+};
+```
+### fsc→	 
+stateless component with flow types skeleton
+```javascript
+import * as React from 'react';
+type Props = {
+    
+};
+export const TEST = (props: Props) => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
+```
+### rpt→	 
+empty propTypes declaration
+```javascript
+TEST.propTypes = {};
+```
+### rdp→	 
+empty defaultProps declaration
+```javascript
+TEST.defaultProps = {};
+```
+### con→	 
+class default constructor with props
+```javascript
+constructor(params) {}
+```
+### conc→	 
+class default constructor with props and context
+```javascript
+constructor(props, context) {
+    super(props, context);
+    
+}
+
+```
+### est→	 
+empty state object
+```javascript
+this.state = {};
+```
+### cwm→	 
+componentWillMount method
+```javascript
+componentWillMount() {}
+```
+### cdm→	 
+componentDidMount method
+```javascript
+componentDidMount() {}
+```
+### cwr→	 
+componentWillReceiveProps method
+```javascript
+componentWillReceiveProps(nextProps) {}
+```
+### scu→	 
+shouldComponentUpdate method
+```javascript
+shouldComponentUpdate(nextProps, nextState) {}
+```
+### cwup→	 
+componentWillUpdate method
+```javascript
+componentWillUpdate(nextProps, nextState) {}
+```
+### cdup→	 
+componentDidUpdate method
+```javascript
+componentDidUpdate(prevProps, prevState) {}
+```
+### cwun→	 
+componentWillUnmount metho
+```javascript
+componentWillUnmount() {}
+```
+### gsbu→	 
+getSnapshotBeforeUpdate method
+```javascript
+getSnapshotBeforeUpdate(prevProps, prevState) {}
+```
+### gdsfp→   
+static getDerivedStateFromProps method
+```javascript
+static getDerivedStateFromProps(nextProps, prevState) {}
+```
+### cdc→	 
+componentDidCatch method
+```javascript
+componentDidCatch(error, info) {}
+
+```
+### ren→	 
+render method
+```javascript
+render() {
+    return (
+        <div>
+            
+        </div>
+    );
+}
+```
+### sst→	 
+this.setState with object as parameter
+```javascript
+this.setState();
+```
+### ssf→	 
+this.setState with function as parameter
+```javascript
+this.setState((state, props) => { 
+    return {  }
+});
+
+```
+### props→   
+this.props
+```javascript
+this.props.
+```
+### state→   
+this.state
+```javascript
+this.state.
+```
+### bnd→	 
+binds the this of method inside the constructor
+```javascript
+this. = this..bind(this);
+```
+### disp→	 
+MapDispatchToProps redux function
+```javascript
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+```
+
+## PropTypes
 
 | Trigger | Content |
 | ------- | ------- | 
-| pta→	| PropTypes.array| 
-| ptar→	| PropTypes.array.isRequired| 
-| ptb→	| PropTypes.bool| 
-| ptbr→	| PropTypes.bool.isRequired| 
-| ptf→	| PropTypes.func| 
-| ptfr→	| PropTypes.func.isRequired| 
-| ptn→	| PropTypes.number| 
-| ptnr→	| PropTypes.number.isRequired| 
-| pto→	| PropTypes.object| 
-| ptor→	| PropTypes.object.isRequired| 
-| pts→	| PropTypes.string| 
-| ptsr→	| PropTypes.string.isRequired| 
-| ptsm→	| PropTypes.symbol| 
+| pta→	    | PropTypes.array| 
+| ptar→	    | PropTypes.array.isRequired| 
+| ptb→	    | PropTypes.bool| 
+| ptbr→	    | PropTypes.bool.isRequired| 
+| ptf→	    | PropTypes.func| 
+| ptfr→	    | PropTypes.func.isRequired| 
+| ptn→	    | PropTypes.number| 
+| ptnr→	    | PropTypes.number.isRequired| 
+| pto→	    | PropTypes.object| 
+| ptor→	    | PropTypes.object.isRequired| 
+| pts→	    | PropTypes.string| 
+| ptsr→	    | PropTypes.string.isRequired| 
+| ptsm→	    | PropTypes.symbol| 
 | ptsmr→	| PropTypes.symbol.isRequired| 
-| ptan→	| PropTypes.any| 
+| ptan→	    | PropTypes.any| 
 | ptanr→	| PropTypes.any.isRequired| 
-| ptnd→	| PropTypes.node| 
+| ptnd→	    | PropTypes.node| 
 | ptndr→	| PropTypes.node.isRequired| 
-| ptel→	| PropTypes.element| 
+| ptel→	    | PropTypes.element| 
 | ptelr→	| PropTypes.element.isRequired| 
-| pti→	| PropTypes.instanceOf(ClassName)| 
-| ptir→	| PropTypes.instanceOf(ClassName).isRequired| 
-| pte→	| PropTypes.oneOf(['News', 'Photos'])| 
-| pter→	| PropTypes.oneOf(['News', 'Photos']).isRequired| 
-| ptet→	| PropTypes.oneOfType([PropTypes.string, PropTypes.number])| 
+| pti→	    | PropTypes.instanceOf(ClassName)| 
+| ptir→	    | PropTypes.instanceOf(ClassName).isRequired| 
+| pte→	    | PropTypes.oneOf(['News', 'Photos'])| 
+| pter→	    | PropTypes.oneOf(['News', 'Photos']).isRequired| 
+| ptet→	    | PropTypes.oneOfType([PropTypes.string, PropTypes.number])| 
 | ptetr→	| PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired| 
-| ptao→	| PropTypes.arrayOf(PropTypes.number)| 
+| ptao→	    | PropTypes.arrayOf(PropTypes.number)| 
 | ptaor→	| PropTypes.arrayOf(PropTypes.number).isRequired| 
-| ptoo→	| PropTypes.objectOf(PropTypes.number)| 
+| ptoo→	    | PropTypes.objectOf(PropTypes.number)| 
 | ptoor→	| PropTypes.objectOf(PropTypes.number).isRequired| 
 | ptoos→	| PropTypes.objectOf(PropTypes.shape())| 
 | ptoosr→	| PropTypes.objectOf(PropTypes.shape()).isRequired| 
-| ptsh→	| PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number})| 
+| ptsh→	    | PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number})| 
 | ptshr→	| PropTypes.shape({color: PropTypes.string, fontSize: PropTypes.number}).isRequired| 

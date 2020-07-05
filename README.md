@@ -20,52 +20,43 @@
 # JavaScript code snippets
 
 ## Import
-### imn→	
-imports entire module 
+### imn→
 ```javascript 
 import 'module';
 ```                  
-### imp→	
-imports entire module import fs from 'fs' 
+### imp→
 ```javascript 
 import moduleName from 'module';
 ```  
-### imd→	
-imports only a portion of the module using destructing
+### imd→
 ```javascript 
 import {  } from 'module';
 ```        
 
 ## Require
 ### rqr→	
-require package require('') 
 ```javascript 
 require('package');
 ```   
 ### req→	
-require package to const
 ```javascript 
 const Name = require('Name');
 ```    
 
 ## Export
 ### mde→	
-default module.exports 
 ```javascript 
 module.exports = { };
 ```                        
-### enf→	
-exports name function 
+### enf→	 
 ```javascript 
 export const functionName = (params) => {};
 ```  
 ### edf→	
-exports default function 
 ```javascript 
 export default function TEST(params) {};
 ```     
-### ecl→	
-exports default class 
+### ecl→	 
 ```javascript 
 export default class className {};
 ```           
@@ -73,39 +64,32 @@ export default class className {};
 
 ## Class 
 ### con→ 	 
-adds default constructor in the class 
 ```javascript 
 constructor(params) {}
 ```     
 ### met→	 
-creates a method inside a class 
 ```javascript 
 methodName(params) {}
 ```      
-### pge→	 
-creates a getter property  
+### pge→	  
 ```javascript 
 get propertyName() {}
 ```      
 ### pse→	 
-creates a setter property  
 ```javascript 
 set propertyName(value) {}
 ``` 
 
 ## Various methods 
 ### anfn→	 
- creates an anonymous function 
 ```javascript  
 (params) => {}
 ```                        
 ### nfn→	 
-creates a named function  
 ```javascript  
 const name = (params) => {}
 ```            
 ### thenc→	 
-adds then and catch declaration to a promise 
 ```javascript  
 .then(result => {})
 .catch(err => {});
@@ -130,29 +114,24 @@ for (const item in object) {}
 
 ## Destructing
 ### dob→	
-destructing object syntax 
 ```javascript 
 const {propertyName} = object;
 ```    
 ### dar→	
-destructing array syntax   
 ```javascript 
 const [propertyName] = array;
 ```     
 
 ## Console 
 ### clg→    
-console log
 ```javascript
  console.log(object);
  ```   
 ### cer→  
-console error
 ```javascript
  console.error(object);
  ``` 
 ### clt→   
-console table
 ```javascript
  console.table(object);
 ``` 

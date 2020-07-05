@@ -23,51 +23,54 @@
 
 | Code | Trigger | Content |
 | ---- | ------- | ------- |
-| `import 'module';`                 | imn→	| imports entire module without module name import 'animate.css' |
+| Import |
+| `import 'module';`                 | imn→	| imports entire module |
 | `import moduleName from 'module';` | imp→	| imports entire module import fs from 'fs' |
-| `import {  } from 'module';`       | imd→	| imports only a portion of the module using destructing import {rename} from 'fs' |
+| `import {  } from 'module';`       | imd→	| imports only a portion of the module using destructing |
+| Require |
 | `require('package');`              | rqr→	| require package require('') |
-| `const Name = require('Name');`    | req→	| require package to const const packageName = require('packageName') |
-| `module.exports = { };`            | mde→	| default module.exports module.exports = {} |
-| `export const functionName = (params) => {};` | enf→	| exports name function export const log = (parameter) => { console.log(parameter);} |
-| `export default function TEST(params) {};` | edf→	| exports default function export default function fileName (parameter){ console.log(parameter);} |
-| `export default class className {};` | ecl→	| exports default class export default class Calculator { } |
+| `const Name = require('Name');`    | req→	| require package to const |
+| Export |
+| `module.exports = { };`            | mde→	| default module.exports |
+| `export const functionName = (params) => {};` | enf→	| exports name function |
+| `export default function TEST(params) {};`    | edf→	| exports default function |
+| `export default class className {};`          | ecl→	| exports default class |
 
 
 ### Class helpers
 
-| Code | Trigger |	Content |
-| ---- | ------- | -------- |
-| `constructor(params) {}`     | con→ 	| adds default constructor in the class constructor() {} |
-| `methodName(params) {}`      | met→	| creates a method inside a class add() {} |
-| `get propertyName() {}`      | pge→	| creates a getter property get propertyName() {return value;} |
-| `set propertyName(value) {}` | pse→	| creates a setter property set propertyName(value) {} |
+| Code | Trigger | Content |
+| ---- | ------- | ------- |
+| `constructor(params) {}`     | con→ 	| adds default constructor in the class |
+| `methodName(params) {}`      | met→	| creates a method inside a class |
+| `get propertyName() {}`      | pge→	| creates a getter property  |
+| `set propertyName(value) {}` | pse→	| creates a setter property  |
 
 ### Various methods 
 
 | Code | Trigger |	Content | 
 | ---- | ------- | -------- |
-| `array.forEach(currentItem => {});` | fre→	| forEach loop in ES6 syntax array.forEach(currentItem => {}) |
-| `for (const item of object) {}`     | fof→	| for ... of loop for(const item of object) {} |
-| `for (const item in object) {}`     | fin→	| for ... in loop for(const item in object) {} |
-| `(params) => {}`                    | anfn→	| creates an anonymous function (params) => {} |
-| `const name = (params) => {}`       | nfn→	| creates a named function const add = (params) => {} |
-| `const {propertyName} = object;`    | dob→	| destructing object syntax const {rename} = fs |
-| `const [propertyName] = array;`          | dar→	| destructing array syntax const [first, second] = [1,2] |
-| `setInterval(() => {}, intervalInms);`   | sti→	| set interval helper method setInterval(() => {}); |
-| `setTimeout(() => {}, delayInms);`       | sto→	| set timeout helper method setTimeout(() => {}); |
-| `.then(result => { }).catch(err => {});` | thenc→	| adds then and catch declaration to a promise .then((res) => {}).catch((err) => {}); |
+| `(params) => {}`                         | anfn→	| creates an anonymous function |
+| `const name = (params) => {}`            | nfn→	| creates a named function  |
+| `.then(result => { }).catch(err => {});` | thenc→	| adds then and catch declaration to a promise |
+| Loops |
+| `array.forEach(currentItem => {});` | fre→	| forEach loop in ES6 syntax  |
+| `for (const item of object) {}`     | fof→	| for ... of loop  |
+| `for (const item in object) {}`     | fin→	| for ... in loop  |
+| Destructing |
+| `const {propertyName} = object;`    | dob→	| destructing object syntax  |
+| `const [propertyName] = array;`     | dar→	| destructing array syntax   |
 
 ### Console methods
 
 | Code | Trigger |	Content |
 | ---- | ------- | -------- |
-| `console.debug(object);` | cdb→	| console debug console.debug(object) |
-| `console.error(object);` | cer→	| console error console.error(object) |
-| `console.log(object);`   | clg→	| console log console.log(object) |
-| `console.info(object);`  | cin→	| console info console.info |
-| `console.time(object);`  | clt→	| console table console.table |
-| `console.time(object);`  | cti→	| console time console.time |
+| `console.log(object);`   | clg→	| console log    |
+| `console.error(object);` | cer→	| console error  |
+| `console.table(object);` | clt→	| console table  |
+| `console.debug(object);` | cdb→	| console debug  |
+| `console.info(object);`  | cin→	| console info   |
+| `console.time(object);`  | cti→	| console time   |
 
 ### Reactjs code snippets
 

@@ -1,1 +1,3 @@
-console.time(object);
+(params) => {
+    
+}

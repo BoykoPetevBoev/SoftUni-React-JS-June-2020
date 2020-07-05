@@ -19,7 +19,7 @@
 
 ## JavaScript code snippets
 
-### Import and export
+### Import and export 
 
 | Code | Trigger | Content |
 | ---- | ------- | ------- |
@@ -61,18 +61,67 @@
 | ```javascript const {propertyName} = object;```    | dob→	| destructing object syntax  |
 | ```javascript const [propertyName] = array;```     | dar→	| destructing array syntax   |
 
-### Console methods
+## Console methods
 
-| Code | Trigger |	Content |
-| ---- | ------- | -------- |
-| ```javascript console.log(object);```   | clg→	| console log    |
-| ```javascript console.error(object);``` | cer→	| console error  |
-| ```javascript console.table(object);``` | clt→	| console table  |
-| ```javascript console.debug(object);``` | cdb→	| console debug  |
-| ```javascript console.info(object);```  | cin→	| console info   |
-| ```javascript console.time(object);```  | cti→	| console time   |
+### **clg→**    console log
+```javascript
+ console.log(object);
+ ```   
+ ---
+### **cer→**  console error
+```javascript
+ console.error(object);
+ ``` 
+ ---
+### **clt→**    console table
+```javascript
+ console.table(object);
+``` 
+---
 
-### Reactjs code snippets
+## Reactjs code snippets
+---
+### **rcc→**    class component skeleton
+```javascript
+import React, { Component } from 'react';
+
+class TEST extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
+export default TEST;
+```
+---
+### **rrc→**   class component skeleton with react-redux connect
+```javascript
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+    return {
+
+    };
+}
+class TEST extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
+export default connect(
+    mapStateToProps,
+)(TEST);
+```
+
+
 
 | Code | Trigger | Content |
 | ---- | ------- | ------- |

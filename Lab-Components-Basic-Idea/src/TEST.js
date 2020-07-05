@@ -1,4 +1,1 @@
-export default class className extends baseclassName {
-    
-};
-
+console.time(object);

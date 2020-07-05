@@ -24,53 +24,53 @@
 | Code | Trigger | Content |
 | ---- | ------- | ------- |
 | **Import** |
-| ```import 'module';```                 | imn→	| imports entire module |
-| ```import moduleName from 'module';``` | imp→	| imports entire module import fs from 'fs' |
-| ```import {  } from 'module';```       | imd→	| imports only a portion of the module using destructing |
+| ```javascript import 'module';```                 | imn→	| imports entire module |
+| ```javascript import moduleName from 'module';``` | imp→	| imports entire module import fs from 'fs' |
+| ```javascript import {  } from 'module';```       | imd→	| imports only a portion of the module using destructing |
 | **Require** |
-| ```require('package');```            | rqr→	| require package require('') |
-| ```const Name = require('Name');```    | req→	| require package to const |
+| ```javascript require('package');```            | rqr→	| require package require('') |
+| ```javascript const Name = require('Name');```    | req→	| require package to const |
 | **Export** |
-| ```module.exports = { };```                       | mde→	| default module.exports |
-| ```export const functionName = (params) => {};``` | enf→	| exports name function |
-| ```export default function TEST(params) {};```    | edf→	| exports default function |
-| ```export default class className {};```          | ecl→	| exports default class |
+| ```javascript module.exports = { };```                       | mde→	| default module.exports |
+| ```javascript export const functionName = (params) => {};``` | enf→	| exports name function |
+| ```javascript export default function TEST(params) {};```    | edf→	| exports default function |
+| ```javascript export default class className {};```          | ecl→	| exports default class |
 
 
 ### Class helpers
 
 | Code | Trigger | Content |
 | ---- | ------- | ------- |
-| ```constructor(params) {}```     | con→ 	| adds default constructor in the class |
-| ```methodName(params) {}```      | met→	| creates a method inside a class |
-| ```get propertyName() {}```      | pge→	| creates a getter property  |
-| ```set propertyName(value) {}``` | pse→	| creates a setter property  |
+| ```javascript constructor(params) {}```     | con→ 	| adds default constructor in the class |
+| ```javascript methodName(params) {}```      | met→	| creates a method inside a class |
+| ```javascript get propertyName() {}```      | pge→	| creates a getter property  |
+| ```javascript set propertyName(value) {}``` | pse→	| creates a setter property  |
 
 ### Various methods 
 
 | Code | Trigger |	Content | 
 | ---- | ------- | -------- |
-| ```(params) => {}```                         | anfn→	| creates an anonymous function |
-| ```const name = (params) => {}```            | nfn→	| creates a named function  |
-| ```.then(result => { }).catch(err => {});``` | thenc→	| adds then and catch declaration to a promise |
+| ```javascript  (params) => {}```                         | anfn→	| creates an anonymous function |
+| ```javascript  const name = (params) => {}```            | nfn→	| creates a named function  |
+| ```javascript  .then(result => { }).catch(err => {});``` | thenc→	| adds then and catch declaration to a promise |
 | **Loops** |
-| ```array.forEach(currentItem => {});``` | fre→	| forEach loop in ES6 syntax  |
-| ```for (const item of object) {}```     | fof→	| for ... of loop  |
-| ```for (const item in object) {}```     | fin→	| for ... in loop  |
+| ```javascript array.forEach(currentItem => {});``` | fre→	| forEach loop in ES6 syntax  |
+| ```javascript for (const item of object) {}```     | fof→	| for ... of loop  |
+| ```javascript for (const item in object) {}```     | fin→	| for ... in loop  |
 | **Destructing** |
-| ```const {propertyName} = object;```    | dob→	| destructing object syntax  |
-| ```const [propertyName] = array;```     | dar→	| destructing array syntax   |
+| ```javascript const {propertyName} = object;```    | dob→	| destructing object syntax  |
+| ```javascript const [propertyName] = array;```     | dar→	| destructing array syntax   |
 
 ### Console methods
 
 | Code | Trigger |	Content |
 | ---- | ------- | -------- |
-| ```console.log(object);```   | clg→	| console log    |
-| ```console.error(object);``` | cer→	| console error  |
-| ```console.table(object);``` | clt→	| console table  |
-| ```console.debug(object);``` | cdb→	| console debug  |
-| ```console.info(object);```  | cin→	| console info   |
-| ```console.time(object);```  | cti→	| console time   |
+| ```javascript console.log(object);```   | clg→	| console log    |
+| ```javascript console.error(object);``` | cer→	| console error  |
+| ```javascript console.table(object);``` | clt→	| console table  |
+| ```javascript console.debug(object);``` | cdb→	| console debug  |
+| ```javascript console.info(object);```  | cin→	| console info   |
+| ```javascript console.time(object);```  | cti→	| console time   |
 
 ### Reactjs code snippets
 

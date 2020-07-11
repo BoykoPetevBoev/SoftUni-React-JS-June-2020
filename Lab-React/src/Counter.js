@@ -21,7 +21,6 @@ class Counter extends React.Component {
     //         counter: Number(this.state.counter) + 1
     //     })
     // }
-    
     render() {
         return(
             <div>
@@ -30,5 +29,4 @@ class Counter extends React.Component {
         )
     }
 }
-
 export default Counter

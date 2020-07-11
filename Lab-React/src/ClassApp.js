@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
 import Input from './Input';
+import getData from './services/index';
 
 class ClassApp extends React.Component {
     constructor(props) {
@@ -22,8 +23,18 @@ class ClassApp extends React.Component {
             )
         })
     }
+    getData = async () => {
+        const data = await getData()
+        this.setState({
+            data
+        })
+    }
+    componentDidMount(){
+        this.getData();
+    }
 
     render() {
+        console.log(this.state.data);
         return (
             <div className="App">
                 <header className="App-header">

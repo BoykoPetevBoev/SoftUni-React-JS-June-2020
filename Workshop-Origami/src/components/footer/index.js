@@ -8,13 +8,11 @@ function Footer() {
     return (
         <footer className={styles.footer}>
             <ul>
-                <Link href='#' title='Going to 1' type='footer' />
-                <Link href='#' title='Going to 2' type='footer' />
-                <Link href='#' title='Going to 3' type='footer' />
-                <Link href='#' title='Going to 4' type='footer' />
-                <Link href='#' title='Going to 5' type='footer' />
-                <Link href='#' title='Going to 6' type='footer' />
-                <Link href='#' title='Going to 7' type='footer' />
+                <Link href='/' title='Home' type='footer' />
+                <Link href='/post' title='Post' type='footer' />
+                <Link href='/register' title='Register' type='footer' />
+                <Link href='/login' title='Login' type='footer' />
+                <Link href='/profile' title='Profile' type='footer' />
                 <img src={image} />
             </ul>
             <p className={styles.title}>Software University © 2019</p>

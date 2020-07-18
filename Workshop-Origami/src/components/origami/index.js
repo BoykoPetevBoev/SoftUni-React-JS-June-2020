@@ -23,9 +23,9 @@ class Origami extends Component {
     renderOrigami() {
         const { data } = this.state;
 
-        return data.map(origami => {
+        return data.map((origami, index ) => {
             return (
-               <Post key={origami._id} {...origami} />
+               <Post key={origami._id} index={index} {...origami} />
             )
         })
 

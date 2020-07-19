@@ -8,6 +8,8 @@ import HomePage from './pages/home-page/index';
 import SharePage from './pages/share-toughts';
 import Login from './pages/login';
 import Register from './pages/register';
+import Profile from './pages/profile';
+import ErrorPage from './pages/error';
 
 function Navigation () {
  return (
@@ -17,6 +19,8 @@ function Navigation () {
             <Route path='/post' component={SharePage} />
             <Route path='/login' component={Login} />
             <Route path='/register' component={Register} />
+            <Route path='/profile' component={Profile} />
+            <Route component={ErrorPage} />
 
         </Switch>
      </BrowserRouter>

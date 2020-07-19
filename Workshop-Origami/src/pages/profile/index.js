@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import styles from './index.module.css';
 import Wrapper from '../../components/page-wrapper';
-import Button from '../../components/button';
 import Post from '../../components/post';
 
-class Share extends Component {
+class Profile extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            data: []
+            data: [],
+            user: null,
+            posts: null
         }
     }
     componentDidMount() {
@@ -22,6 +23,7 @@ class Share extends Component {
             data: data.slice(0, 3)
         });
     }
+
     renderOrigami() {
         const { data } = this.state;
         return data.map((origami, index) => {
@@ -33,14 +35,20 @@ class Share extends Component {
     }
 
     render() {
+        const { user, posts } = this.state;
         return (
             <Wrapper>
 
                 <div className={styles.container}>
                     <div>
-                        <h1 className={styles.title}>Share your toughts...</h1>
-                        <textarea className={styles.textarea}></textarea>
-                        <Button title='Post' />
+                        <p>
+                            <span>Email:</span>
+                            {user}
+                        </p>
+                        <p>
+                            <span>Posts:</span>
+                            {posts}
+                        </p>
                     </div>
                     <div>
                         <h2>Last 3 post on your wall</h2>
@@ -53,4 +61,4 @@ class Share extends Component {
     }
 }
 
-export default Share;
+export default Profile;

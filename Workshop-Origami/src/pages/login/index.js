@@ -9,7 +9,7 @@ class Login extends Component {
         super(props)
 
         this.state = {
-            email: '',
+            username: '',
             password: ''
         }
     }
@@ -18,18 +18,52 @@ class Login extends Component {
         newState[type] = event.target.value;
         this.setState(newState);
     }
+    onSubmit = async (e) => {
+        e.preventDefault();
+        const {
+            username,
+            password,
+        } = this.state;
+
+        if (!username || !password) {
+            alert('Invalid username or password');
+            return;
+        }
+        const promise = await fetch('http://localhost:4000/api/user/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                username,
+                password
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        try {
+            if (promise.ok) {
+                const token = promise.headers.get('Authorization');
+                document.cookie = `token=${token}`;
+                const data = promise.json();
+
+                console.log(data);
+                this.props.history.push('/');
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }   
     render() {
-        const { email, password } = this.state;
+        const { username, password } = this.state;
         return (
             <Wrapper>
                 <div className={styles.container}>
                     <h1 className={styles.title}>Login Page</h1>
-                    <form>
+                    <form onSubmit={this.onSubmit}>
                         <Input
-                            value={email}
-                            onChange={(e) => this.onChange(e, 'email')}
-                            label='Email'
-                            id='email'
+                            value={username}
+                            onChange={(e) => this.onChange(e, 'username')}
+                            label='Username'
+                            id='username'
                         />
                         <Input
                             value={password}

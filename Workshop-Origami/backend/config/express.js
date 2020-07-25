@@ -5,7 +5,9 @@ const cors = require('cors');
 const secret = 'secret';
 
 module.exports = (app) => {
-    app.use(cors());
+    app.use(cors({
+        exposedHeaders: 'Authorization'
+    }));
     app.use(cookieParser(secret));
     app.use(express.static('static'));
     app.use(express.json());

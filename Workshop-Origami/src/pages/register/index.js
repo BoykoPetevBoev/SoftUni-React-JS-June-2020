@@ -3,6 +3,7 @@ import styles from './index.module.css';
 import Wrapper from '../../components/page-wrapper';
 import Button from '../../components/button';
 import Input from '../../components/input';
+import UserContext from '../../Context';
 
 class Register extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class Register extends Component {
             rePassword: ''
         }
     }
+    static contextType = UserContext
 
     onChange = (event, type) => {
         const newState = {};
@@ -55,9 +57,14 @@ class Register extends Component {
             if (promise.ok) {
                 const token = promise.headers.get('Authorization');
                 document.cookie = `token=${token}`;
-                const data = promise.json();
 
-                console.log(data);
+                const data = await promise.json();
+                const user = {
+                    username: data.username,
+                    id: data._id
+                }
+                this.context.login(user);
+
                 this.props.history.push('/');
             }
         } catch (error) {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './index.module.css';
 import Wrapper from '../../components/page-wrapper';
 import Post from '../../components/post';
+import UserContext from '../../Context';
 
 class Profile extends Component {
     constructor(props) {
@@ -13,6 +14,8 @@ class Profile extends Component {
             posts: null
         }
     }
+    static contextType = UserContext;
+
     componentDidMount() {
         this.getOrigamis();
     }
@@ -31,7 +34,10 @@ class Profile extends Component {
                 <Post key={origami._id} index={index} {...origami} />
             )
         })
-
+    }
+    logout = () => {
+        this.context.logout();
+        this.props.history.push('/');
     }
 
     render() {
@@ -49,6 +55,7 @@ class Profile extends Component {
                             <span>Posts:</span>
                             {posts}
                         </p>
+                        <button onClick={this.logout}>logout</button>
                     </div>
                     <div>
                         <h2>Last 3 post on your wall</h2>

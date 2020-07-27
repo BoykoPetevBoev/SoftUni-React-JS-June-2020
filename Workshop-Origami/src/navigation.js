@@ -20,7 +20,6 @@ class Navigation extends Component {
 
     render() {
         const { loggedIn } = this.context;
-        console.log(loggedIn)
         return (
             <BrowserRouter>
                 <Switch>

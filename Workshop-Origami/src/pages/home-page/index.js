@@ -10,7 +10,6 @@ class HomePage extends Component {
   static contextType = UserContext;
 
   render() {
-    console.log(this.context)
     return (
       <Wrapper>
 

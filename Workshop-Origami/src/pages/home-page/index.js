@@ -3,21 +3,15 @@ import React, { Component } from 'react';
 import styles from './index.module.css';
 import Origami from '../../components/origami';
 import Wrapper from '../../components/page-wrapper';
-import UserContext from '../../Context';
 
+function HomePage() {
+  return (
 
-class HomePage extends Component {
-  static contextType = UserContext;
-
-  render() {
-    return (
-      <Wrapper>
-
+    <Wrapper>
       <Origami />
-
     </Wrapper>
-    );
-  }
+    
+  );
 }
 
 export default HomePage;

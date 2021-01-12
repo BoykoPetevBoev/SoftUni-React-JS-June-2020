@@ -1,8 +1,8 @@
+![React-JS-June-2020](https://github.com/BoykoPetevBoev/React-JS-June-2020/blob/master/_README/React.jpg)
 
+![React-JS-June-2020](https://github.com/BoykoPetevBoev/React-JS-June-2020/blob/master/_README/ReactJS-Certificate.png)
 
-![React-JS-June-2020](https://github.com/BoykoPetevBoev/React-JS-June-2020/blob/master/README/React.jpg)
-
-<img src="https://github.com/BoykoPetevBoev/React-JS-June-2020/blob/master/README/ReactJS%20%E2%80%93%20June%202020%20-%20Certificate.jpeg" height="1132" width="390">
+---
 
 ## Themes
 
@@ -13,11 +13,6 @@
 * React Hooks
 * Authentication
 * Advanced Techniques
- 
-
-<!-- ## Сертификат
-
-![Certificate]() -->
 
 # JavaScript code snippets
 
